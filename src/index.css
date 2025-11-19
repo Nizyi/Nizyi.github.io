@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,12 +17,16 @@
   .animate-fadeIn {
     animation: fadeIn 0.5s ease-in;
   }
+
+  .animate-fadeOut {
+    animation: fadeOut 0.5s ease-out;
+  }
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 800;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);

@@ -9,7 +9,7 @@ const appsConfig = {
 //    'Settings': lazy(() => import('./apps/SettingsApp'))
 };
 
-function AppWindow({ appName, onClose }) {
+function AppWindow({ appName, onClose, onFocus, appInFolder  }) {
     const AppComponent = appsConfig[appName];
 
     return (
@@ -24,6 +24,7 @@ function AppWindow({ appName, onClose }) {
             minHeight={200}
             bounds="parent"
             dragHandleClassName="title-bar"
+            onMouseDown={onFocus}
         >
             <div className="w-full h-full rounded-xl bg-white shadow-2xl border-2 border-orange-200
                 text-black flex flex-col transition-all duration-300 overflow-hidden"

@@ -3,18 +3,20 @@ import Dock from './Dock';
 import TopBar from './TopBar';
 import AppWindow from './AppWindow';
 import { useState } from 'react';
-import { VscHome, VscArchive, VscAccount, VscSettingsGear } from 'react-icons/vsc';
+import { VscHome, VscArchive, VscAccount, VscSettingsGear, VscFile } from 'react-icons/vsc';
 
 
 function Desktop() {
 
   const [openWindows, setOpenWindows] = useState([]);
+  const [appFocus, setAppFocus] = useState(null);
 
   const handleOpenApp = (appName) => {
     setOpenWindows([...openWindows, { id: Date.now(), appName }]);
   };
 
   const handleCloseApp = (windowId) => {
+    setAppFocus(null);
     setOpenWindows(openWindows.filter(window => window.id !== windowId));
   };
   
@@ -36,19 +38,27 @@ function Desktop() {
   return (
     <div className="relative h-screen w-screen">
       
-      <TopBar />
+      <TopBar 
+          focusedApp={appFocus}
+      />
       
-      <div className="pt-8">
-        <AppIcons 
-            items={itemsapp}
-        /> 
+      <div className="pt-10 flex justify-start pl-4">
+        <div className="w-fit">
+          <AppIcons items={itemsFiles} />
+        </div>
+        <div className="w-fit">
+          <AppIcons 
+              items={itemsapp}
+          /> 
+        </div>
       </div>
-
+      
       {openWindows.map(window => (
         <AppWindow 
           key={window.id}
           appName={window.appName}
           onClose={() => handleCloseApp(window.id)}
+          onFocus={() => setAppFocus(window.appName)}
         />
       ))}
 
