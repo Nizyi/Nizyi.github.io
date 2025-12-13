@@ -6,9 +6,23 @@ import { getItemsInFolder, iconComponents } from './config/apps';
 function FileSystemManager({ onAppFocus }) {
     const [openWindows, setOpenWindows] = useState([]);
 
+    const getMaxZIndex = () => {
+        if (openWindows.length === 0) return 0;
+        return Math.max(...openWindows.map(w => w.zIndex || 0));
+    };
+
+    const bringToFront = (windowId) => {
+        setOpenWindows(openWindows.map(window => 
+            window.id === windowId 
+                ? { ...window, zIndex: getMaxZIndex() + 1 }
+                : window
+        ));
+    };
+
     const handleOpenApp = (appName) => {
         const alreadyOpen = openWindows.find(w => w.type === 'app' && w.appName === appName);
         if (alreadyOpen) {
+            bringToFront(alreadyOpen.id);
             onAppFocus(appName);
             return;
         }
@@ -17,7 +31,8 @@ function FileSystemManager({ onAppFocus }) {
             id: Date.now(), 
             type: 'app',
             title: appName,
-            appName 
+            appName,
+            zIndex: getMaxZIndex() + 1,
         }]);
         onAppFocus(appName);
     };
@@ -25,6 +40,7 @@ function FileSystemManager({ onAppFocus }) {
     const handleOpenFolder = (folderName, folderPath) => {
         const alreadyOpen = openWindows.find(w => w.type === 'folder' && w.folderPath === folderPath);
         if (alreadyOpen) {
+            bringToFront(alreadyOpen.id);
             onAppFocus(folderName);
             return;
         }
@@ -33,7 +49,8 @@ function FileSystemManager({ onAppFocus }) {
             id: Date.now(), 
             type: 'folder',
             title: folderName,
-            folderPath 
+            folderPath,
+            zIndex: getMaxZIndex() + 1,
         }]);
         onAppFocus(folderName);
     };
@@ -41,6 +58,11 @@ function FileSystemManager({ onAppFocus }) {
     const handleCloseWindow = (windowId) => {
         onAppFocus(null);
         setOpenWindows(openWindows.filter(window => window.id !== windowId));
+    };
+
+    const handleWindowFocus = (windowId, title) => {
+        bringToFront(windowId);
+        onAppFocus(title);
     };
 
     const handleItemClick = (item) => {
@@ -78,8 +100,9 @@ function FileSystemManager({ onAppFocus }) {
                     appName={window.type === 'app' ? window.appName : undefined}
                     folderPath={window.type === 'folder' ? window.folderPath : undefined}
                     onClose={() => handleCloseWindow(window.id)}
-                    onFocus={() => onAppFocus(window.title)}
+                    onFocus={() => handleWindowFocus(window.id, window.title)}
                     onItemClick={handleItemClick}
+                    zIndex={window.zIndex}
                 />
             ))}
         </>

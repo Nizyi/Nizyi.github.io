@@ -6,10 +6,17 @@ import { getItemsInFolder, iconComponents } from './config/apps';
 
 // Configuration du lazy loading pour les apps
 const appsComponents = {
-    'Test': lazy(() => import('./Apps/Test')),
     'Cv': lazy(() => import('./Apps/Cv')),
     'NextFeatures': lazy(() => import('./Apps/NextFeatures')), 
     'PortfolioOS': lazy(() => import('./Apps/PortfolioOS')),
+    'Ams': lazy(() => import('./Apps/Ams')),
+    'Compilateur': lazy(() => import('./Apps/Compilateur')),
+    'Labyrinthe': lazy(() => import('./Apps/Labyrinthe')),
+    'OuterWilds': lazy(() => import('./Apps/OuterWilds')),
+    'SearchEngine': lazy(() => import('./Apps/SearchEngine')),
+    'Superette': lazy(() => import('./Apps/Superette')),
+    'Chill2gether': lazy(() => import('./Apps/Chill2gether')),
+    'CERICar': lazy(() => import('./Apps/CERICar')),
 };
 
 function Window({ 
@@ -19,7 +26,8 @@ function Window({
     folderPath,
     onClose, 
     onFocus,
-    onItemClick 
+    onItemClick ,
+    zIndex
 }) {
     const renderContent = () => {
         if (windowType === 'app') {
@@ -59,16 +67,17 @@ function Window({
     return (
         <Rnd 
             default={{
-                x: 600,
-                y: 300,
+                x: windowType === 'folder' ? 500 : 350,
+                y: windowType === 'folder' ? 300 : 100,
                 width: windowType === 'folder' ? 500 : 800,
                 height: windowType === 'folder' ? 400 : 600,
             }}
-            minWidth={300}
-            minHeight={200}
+            minWidth={windowType === 'folder' ? 300 : 800}
+            minHeight={windowType === 'folder' ? 200 : 800}
             bounds="parent"
             dragHandleClassName="title-bar"
             onMouseDown={onFocus}
+            style={{ zIndex: zIndex }}
         >
             <div 
                 className="w-full h-full rounded-xl bg-white shadow-2xl border-2 border-orange-200
