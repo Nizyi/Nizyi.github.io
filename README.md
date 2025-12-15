@@ -67,10 +67,9 @@ src/
 ## 👨‍💻 Auteur
 
 **Tom Senechal**
-- GitHub: [@Nizyi](https://github.com/Nizyi)
 - Email: tom.senechal.dev@gmail.com
 - Portfolio: [nizyi.me](https://nizyi.me)
 
 ## 📄 Licence
 
-Ce projet est open source et disponible pour consultation. Veuillez me contacter pour toute utilisation.
+Ce projet est open source et disponible pour consultation. 
