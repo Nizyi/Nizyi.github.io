@@ -93,42 +93,42 @@ function Cv() {
                             {
                                 title: 'Portfolio OS',
                                 context: 'Projet Personnel',
-                                period: '2024-2025',
+                                period: '2025-XXXX',
                                 description: 'Portfolio interactif avec interface macOS : système de fenêtres draggables, explorateur de fichiers, lazy loading',
                                 tech: 'React, Tailwind CSS, Framer Motion, Vite'
                             },
                             {
                                 title: 'CERICar',
                                 context: 'Projet Universitaire - L3',
-                                period: '2024-2025',
+                                period: '2025-2026',
                                 description: 'Application web de covoiturage avec moteur de recherche intelligent, gestion des correspondances et réservations',
                                 tech: 'PHP, Yii Framework, PostgreSQL, jQuery Ajax, UML'
                             },
                             {
                                 title: 'Chill2gether',
                                 context: 'Projet Universitaire - L3',
-                                period: '2024-2025',
+                                period: '2025-2026',
                                 description: 'Application de streaming collaboratif en temps réel avec système de rooms et synchronisation vidéo',
                                 tech: 'React, Node.js, Socket.io, PostgreSQL, Tailwind CSS'
                             },
                             {
                                 title: 'CERI Compiler',
-                                context: 'Projet Universitaire - L3',
-                                period: '2024',
+                                context: 'Projet Universitaire - L2',
+                                period: '2025',
                                 description: 'Compilateur Pascal-like vers assembleur x86-64 avec analyse lexicale, syntaxique, sémantique et génération de code',
-                                tech: 'C++, Flex/Flex++, x86-64 (AT&T)'
+                                tech: 'C++, Flex/Flex++'
                             },
                             {
                                 title: 'Outer Wilds Wiki',
                                 context: 'Projet Universitaire - L2',
-                                period: '2024',
+                                period: '2025',
                                 description: 'Site web avec back-office admin, gestion d\'articles/FAQ, système de sessions et animations Three.js',
                                 tech: 'PHP, PostgreSQL, Tailwind CSS, Three.js'
                             },
                             {
                                 title: 'Admin Monitoring System (AMS)',
                                 context: 'Projet Universitaire - L2',
-                                period: '2024',
+                                period: '2025',
                                 description: 'Système de monitoring avec sondes système, alertes CERT-FR, dashboard web et graphiques historiques',
                                 tech: 'Python, Flask, SQLite, Matplotlib'
                             },
@@ -148,8 +148,8 @@ function Cv() {
                             },
                             {
                                 title: 'Labyrinthe',
-                                context: 'Projet Universitaire - L2',
-                                period: '2023-2024',
+                                context: 'Projet Universitaire - L1',
+                                period: '2023',
                                 description: 'Jeu de labyrinthe en terminal avec génération procédurale, résolution DFS et animations ncurses',
                                 tech: 'C++, ncurses, Algorithmes de graphes'
                             }
@@ -244,7 +244,7 @@ function Cv() {
                         <div className="grid grid-cols-2 gap-4">
                             <div>
                                 <p className="text-gray-600 text-sm mb-1">Email</p>
-                                <p className="font-medium text-gray-800">senechal.tom@gmail.com</p>
+                                <p className="font-medium text-gray-800">tom.senechal.dev@gmail.com</p>
                             </div>
                             <div>
                                 <p className="text-gray-600 text-sm mb-1">GitHub</p>

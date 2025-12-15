@@ -54,8 +54,10 @@ function NextFeatures() {
             items: [
                 { text: "Afficher le chemin du dossier actuel", priority: "high" },
                 { text: "Navigation avec boutons Précédent/Suivant", priority: "medium" },
+                { text: "Gérer le responsive pour mobile", priority: "low" },
                 { text: "Vue en arborescence", priority: "low" },
                 { text: "Barre de recherche", priority: "low" }
+
             ]
         },
         {
@@ -64,35 +66,56 @@ function NextFeatures() {
             items: [
                 { text: "Sélectionner plusieurs icônes avec Ctrl+Clic", priority: "medium" },
                 { text: "Zone de sélection (drag pour sélectionner)", priority: "low" },
-                { text: "Actions groupées (supprimer, déplacer)", priority: "low" }
+                { text: "Actions groupées (supprimer, déplacer)", priority: "low" },
             ]
         }
     ];
 
     const getStatusColor = (status) => {
         switch (status) {
-            case 'in-progress': return 'text-green-600 bg-green-100';
-            case 'planned': return 'text-blue-600 bg-blue-100';
-            case 'research': return 'text-orange-600 bg-orange-100';
-            default: return 'text-gray-600 bg-gray-100';
+            case 'in-progress': 
+                return 'text-green-600 bg-green-100';
+
+            case 'planned': 
+                return 'text-blue-600 bg-blue-100';
+
+            case 'research': 
+                return 'text-orange-600 bg-orange-100';
+
+            default: 
+                return 'text-gray-600 bg-gray-100';
         }
     };
 
     const getStatusText = (status) => {
         switch (status) {
-            case 'in-progress': return 'En cours';
-            case 'planned': return 'Planifié';
-            case 'research': return 'Recherche';
-            default: return 'Inconnu';
+            case 'in-progress': 
+                return 'En cours';
+
+            case 'planned': 
+                return 'Planifié';
+
+            case 'research': 
+                return 'Recherche';
+
+            default: 
+                return 'Inconnu';
         }
     };
 
     const getPriorityColor = (priority) => {
         switch (priority) {
-            case 'high': return 'text-red-600';
-            case 'medium': return 'text-yellow-600';
-            case 'low': return 'text-green-600';
-            default: return 'text-gray-600';
+            case 'high': 
+                return 'text-red-600';
+
+            case 'medium': 
+                return 'text-yellow-600';
+
+            case 'low': 
+                return 'text-green-600';
+
+            default: 
+                return 'text-gray-600';
         }
     };
 
@@ -127,9 +150,9 @@ function NextFeatures() {
 
                 {/* Liste des fonctionnalités */}
                 <div className="space-y-6">
-                    {features.map((feature, idx) => (
+                    {features.map((feature, id) => (
                         <div
-                            key={idx}
+                            key={id}
                             className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden
                          hover:shadow-lg transition-shadow"
                         >

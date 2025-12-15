@@ -1,20 +1,82 @@
-<<<<<<< HEAD
-# React + Vite
+# Portfolio OS - Nizyi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio interactif inspiré de macOS, développé avec React et déployé sur GitHub Pages.
 
-Currently, two official plugins are available:
+🌐 **Site en ligne** : [nizyi.me](https://nizyi.me)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Description
 
-## React Compiler
+Portfolio personnel présentant mes projets universitaires et personnels sous forme d'un système d'exploitation interactif. Interface moderne avec fenêtres draggables, dock fonctionnel et explorateur de fichiers.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Fonctionnalités
 
-## Expanding the ESLint configuration
+- **Interface macOS** : Design inspiré de macOS avec animations fluides
+- **Système de fenêtres** : Fenêtres draggables et redimensionnables
+- **Dock interactif** : Navigation rapide vers les applications et dossiers
+- **Explorateur de fichiers** : Organisation des projets par dossiers
+- **Applications** :
+  - CV interactif
+  - Projets universitaires (CERICar, Chill2gether, CERI Compiler, etc.)
+  - Outer Wilds Wiki
+  - Admin Monitoring System
+  - Et plus encore...
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# Nizyi.github.io
->>>>>>> 1f07c373a425162925c0b8fcb8ee0dc2afd49401
+## 🛠️ Technologies utilisées
+
+- **React** - Framework JavaScript
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **react-rnd** - Fenêtres draggables
+- **React Icons** - Icônes
+
+## 📦 Installation
+
+```bash
+# Cloner le repo
+git clone https://github.com/Nizyi/nizyi.github.io.git
+cd nizyi.github.io
+
+# Installer les dépendances
+npm install
+
+# Lancer en développement
+npm run dev
+
+# Build pour production
+npm run build
+```
+
+## 🌐 Déploiement
+
+Le site est automatiquement déployé sur GitHub Pages via la commande :
+
+```bash
+npm run deploy
+```
+
+## 📁 Structure du projet
+
+```
+src/
+├── components/
+│   ├── Apps/          # Applications individuelles
+│   ├── config/        # Configuration des apps et du système
+│   ├── Desktop.jsx    # Composant principal du bureau
+│   ├── Dock.jsx       # Barre de navigation
+│   ├── Window.jsx     # Composant fenêtre
+│   └── ...
+├── App.jsx
+└── main.jsx
+```
+
+## 👨‍💻 Auteur
+
+**Tom Senechal**
+- GitHub: [@Nizyi](https://github.com/Nizyi)
+- Email: tom.senechal.dev@gmail.com
+- Portfolio: [nizyi.me](https://nizyi.me)
+
+## 📄 Licence
+
+Ce projet est open source et disponible pour consultation. Veuillez me contacter pour toute utilisation.

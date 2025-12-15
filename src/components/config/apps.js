@@ -19,7 +19,7 @@ export const appsConfig = {
         iconName: 'VscFolder',
         path: '/Desktop',
         isPermanent: true,
-        children: ['test-app', 'portfolioos-app', 'outerwildswiki-app', 'superette-app', 'searchmotor-app', 'labyrinthe-app', 'ams-app', 'compilateur-app'], 
+        children: ['test-app', 'portfolioos-app', 'outerwildswiki-app', 'superette-app', 'searchmotor-app', 'labyrinthe-app', 'ams-app', 'compilateur-app'],
     },
 
     Cv: {
@@ -28,7 +28,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscAccount',
         component: 'Cv',
-        path: '/Desktop', 
+        path: '/Desktop',
         isPermanent: true,
     },
     NextFeatures: {
@@ -37,7 +37,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscEdit',
         component: 'NextFeatures',
-        path: '/Desktop', 
+        path: '/Desktop',
         isPermanent: true,
     },
     PortfolioOS: {
@@ -46,7 +46,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'PortfolioOS',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
     OuterWilds: {
@@ -55,7 +55,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'OuterWilds',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
     Superette: {
@@ -64,7 +64,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Superette',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
     SearchEngine: {
@@ -73,7 +73,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'SearchEngine',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
     Labyrinthe: {
@@ -82,7 +82,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Labyrinthe',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
     Ams: {
@@ -91,7 +91,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Ams',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
     Compilateur: {
@@ -100,7 +100,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Compilateur',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
     Chill2gether: {
@@ -109,7 +109,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Chill2gether',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
     CERICar: {
@@ -118,7 +118,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'CERICar',
-        path: '/Desktop/Projects', 
+        path: '/Desktop/Projects',
         isPermanent: true,
     },
 };
@@ -128,23 +128,27 @@ export const dockItems = [
     {
         iconName: 'VscHome',
         label: 'Home',
-        appName: 'Test'
+        appName: null,
+        type: 'button'
     },
     {
-        iconName: 'VscArchive',
-        label: 'Archive',
-        appName: 'Archive'
+        iconName: 'VscFolder',
+        label: 'Projects',
+        appName: 'Projects',
+        type: 'folder'
     },
     {
         iconName: 'VscAccount',
-        label: 'Profile',
-        appName: 'Cv'
+        label: 'CV',
+        appName: 'Cv',
+        type: 'app'
     },
     {
-        iconName: 'VscSettingsGear',
-        label: 'Settings',
-        appName: 'Settings'
-    },
+        iconName: 'VscEdit',
+        label: 'Next Features',
+        appName: 'NextFeatures',
+        type: 'app'
+    }
 ];
 
 // Fonction utilitaire pour récupérer les items d'un dossier

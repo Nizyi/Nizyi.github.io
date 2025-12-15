@@ -27,8 +27,6 @@ function Compilateur() {
     const techStack = [
         { name: 'C++', color: 'bg-blue-600' },
         { name: 'Flex/Flex++', color: 'bg-purple-600' },
-        { name: 'x86-64 (AT&T)', color: 'bg-yellow-600' },
-        { name: 'GCC / GDB', color: 'bg-green-600' },
     ];
 
     return (
@@ -45,7 +43,7 @@ function Compilateur() {
                     CERI Compiler
                 </h1>
                 <p className="text-base lg:text-xl text-gray-600 text-center mb-6 lg:mb-8 px-4">
-                    Compilateur pédagogique Pascal-like → assembleur x86-64
+                    Compilateur pédagogique Pascal-like 
                 </p>
 
                 <div className="w-full">
