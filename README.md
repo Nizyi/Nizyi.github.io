@@ -1,4 +1,4 @@
-# Portfolio OS - Nizyi
+# Auriel OS - Portfolio
 
 Portfolio interactif inspiré de macOS, développé avec React et déployé sur GitHub Pages.
 
@@ -13,13 +13,7 @@ Portfolio personnel présentant mes projets universitaires et personnels sous fo
 - **Interface macOS** : Design inspiré de macOS avec animations fluides
 - **Système de fenêtres** : Fenêtres draggables et redimensionnables
 - **Dock interactif** : Navigation rapide vers les applications et dossiers
-- **Explorateur de fichiers** : Organisation des projets par dossiers
-- **Applications** :
-  - CV interactif
-  - Projets universitaires (CERICar, Chill2gether, CERI Compiler, etc.)
-  - Outer Wilds Wiki
-  - Admin Monitoring System
-  - Et plus encore...
+- **Explorateur de fichiers** : Organisation d'applications par dossiers
 
 ## 🛠️ Technologies utilisées
 
