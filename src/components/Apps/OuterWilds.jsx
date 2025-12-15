@@ -4,8 +4,8 @@ function OuterWildsWiki() {
     const features = [
         {
             icon: <VscBook size={28} />,
-            title: "Gestion d’articles",
-            description: "Création, modification et consultation d’articles, avec un éditeur de texte enrichi côté admin."
+            title: "Gestion d'articles",
+            description: "Création, modification et consultation d'articles, avec un éditeur de texte enrichi côté admin."
         },
         {
             icon: <VscExtensions size={28} />,
@@ -15,12 +15,12 @@ function OuterWildsWiki() {
         {
             icon: <VscGlobe size={28} />,
             title: "Front-office public",
-            description: "Pages principales (accueil, articles, FAQ, contact) avec une navigation simple via réécriture d’URL."
+            description: "Pages principales (accueil, articles, FAQ, contact) avec une navigation simple via réécriture d'URL."
         },
         {
             icon: <VscRocket size={28} />,
             title: "Accueil animé",
-            description: "Page d’accueil avec expérimentations visuelles (notamment autour du système solaire) en JavaScript/Three.js."
+            description: "Page d'accueil avec expérimentations visuelles (notamment autour du système solaire) en JavaScript/Three.js."
         },
         {
             icon: <VscExtensions size={28} />,
@@ -40,21 +40,21 @@ function OuterWildsWiki() {
         <div className="h-full w-full flex flex-col lg:flex-row">
             
             {/* Sidebar */}
-            <div className="lg:w-1/3 bg-gradient-to-br from-slate-800 to-indigo-900 border-b-2 lg:border-b-0 lg:border-r-2 border-indigo-700 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
+            <div className="lg:w-1/3 bg-gradient-to-br from-orange-100 to-yellow-100 border-b-2 lg:border-b-0 lg:border-r-2 border-orange-300 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
                 
-                <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
+                <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-orange-500 to-amber-600 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
                     <VscRocket className="text-4xl lg:text-6xl text-white" />
                 </div>
 
-                <h1 className="text-2xl lg:text-4xl font-bold text-white mb-2 lg:mb-4 text-center">
+                <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-2 lg:mb-4 text-center">
                     Outer Wilds Wiki
                 </h1>
-                <p className="text-base lg:text-xl text-gray-300 text-center mb-6 lg:mb-8 px-4">
+                <p className="text-base lg:text-xl text-gray-700 text-center mb-6 lg:mb-8 px-4">
                     Projet web (L2) orienté backend
                 </p>
 
                 <div className="w-full">
-                    <h3 className="text-lg lg:text-xl font-bold text-indigo-300 mb-3 lg:mb-4 text-center">
+                    <h3 className="text-lg lg:text-xl font-bold text-orange-700 mb-3 lg:mb-4 text-center">
                         🛠️ Technologies
                     </h3>
                     <div className="flex flex-wrap gap-2 justify-center">
@@ -87,23 +87,23 @@ function OuterWildsWiki() {
                 <div className="p-6 lg:p-8">
 
                     <div className="mb-8 lg:mb-12">
-                        <h2 className="text-xl lg:text-2xl font-bold text-indigo-600 mb-4 lg:mb-6 border-b-2 border-indigo-200 pb-2">
+                        <h2 className="text-xl lg:text-2xl font-bold text-orange-600 mb-4 lg:mb-6 border-b-2 border-orange-200 pb-2">
                             📖 Description
                         </h2>
-                        <div className="bg-gradient-to-br from-slate-50 to-indigo-50 rounded-2xl p-4 lg:p-6 border border-indigo-200">
+                        <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-4 lg:p-6 border border-orange-200">
                             <p className="text-sm lg:text-base text-gray-700 leading-relaxed mb-4">
                                 Application web inspirée de <strong>Outer Wilds</strong>, réalisée en <strong>L2</strong> avec un focus
                                 sur le <strong>backend (PHP + PostgreSQL)</strong> : modèles, logique serveur, formulaires et accès admin.
                             </p>
                             <p className="text-sm lg:text-base text-gray-700 leading-relaxed">
-                                Le front a surtout servi de terrain d’expérimentation (mise en page, animations, tests à deux) : certaines
-                                idées n’ont pas été finalisées, d’où un rendu visuel parfois brouillon, mais une base fonctionnelle côté serveur.
+                                Le front a surtout servi de terrain d'expérimentation (mise en page, animations, tests à deux) : certaines
+                                idées n'ont pas été finalisées, d'où un rendu visuel parfois brouillon, mais une base fonctionnelle côté serveur.
                             </p>
                         </div>
                     </div>
 
                     <div className="mb-8 lg:mb-12">
-                        <h2 className="text-xl lg:text-2xl font-bold text-indigo-600 mb-4 lg:mb-6 border-b-2 border-indigo-200 pb-2">
+                        <h2 className="text-xl lg:text-2xl font-bold text-orange-600 mb-4 lg:mb-6 border-b-2 border-orange-200 pb-2">
                             ✨ Fonctionnalités principales
                         </h2>
                         <div className="grid grid-cols-1 gap-4">
@@ -113,7 +113,7 @@ function OuterWildsWiki() {
                                     className="bg-white rounded-xl p-4 lg:p-6 border border-gray-200 hover:shadow-lg transition-shadow"
                                 >
                                     <div className="flex items-start gap-3 lg:gap-4">
-                                        <div className="flex-shrink-0 w-10 h-10 lg:w-12 lg:h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-indigo-600">
+                                        <div className="flex-shrink-0 w-10 h-10 lg:w-12 lg:h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600">
                                             {feature.icon}
                                         </div>
                                         <div>
@@ -127,7 +127,7 @@ function OuterWildsWiki() {
                     </div>
 
                     <div className="mb-8 lg:mb-12">
-                        <h2 className="text-xl lg:text-2xl font-bold text-indigo-600 mb-4 lg:mb-6 border-b-2 border-indigo-200 pb-2">
+                        <h2 className="text-xl lg:text-2xl font-bold text-orange-600 mb-4 lg:mb-6 border-b-2 border-orange-200 pb-2">
                             🎮 Contenu du wiki
                         </h2>
                         <div className="space-y-4">
@@ -138,7 +138,7 @@ function OuterWildsWiki() {
                                 },
                                 {
                                     title: "Accueil / système solaire",
-                                    description: "Présentation visuelle de l’univers avec des animations et tests d’interactions."
+                                    description: "Présentation visuelle de l'univers avec des animations et tests d'interactions."
                                 },
                                 {
                                     title: "FAQ",
@@ -151,9 +151,9 @@ function OuterWildsWiki() {
                             ].map((item, index) => (
                                 <div 
                                     key={index}
-                                    className="bg-gradient-to-r from-slate-50 to-indigo-50 rounded-xl p-5 border border-indigo-200"
+                                    className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-5 border border-orange-200"
                                 >
-                                    <h3 className="font-bold text-indigo-700 mb-2">{item.title}</h3>
+                                    <h3 className="font-bold text-orange-700 mb-2">{item.title}</h3>
                                     <p className="text-gray-700 text-sm">{item.description}</p>
                                 </div>
                             ))}
@@ -161,10 +161,10 @@ function OuterWildsWiki() {
                     </div>
 
                     <div className="mb-6 lg:mb-8">
-                        <h2 className="text-xl lg:text-2xl font-bold text-indigo-600 mb-4 lg:mb-6 border-b-2 border-indigo-200 pb-2">
+                        <h2 className="text-xl lg:text-2xl font-bold text-orange-600 mb-4 lg:mb-6 border-b-2 border-orange-200 pb-2">
                             💡 Ce que j'ai appris
                         </h2>
-                        <div className="bg-green-50 rounded-2xl p-4 lg:p-6 border border-green-200">
+                        <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-4 lg:p-6 border border-orange-200">
                             <ul className="space-y-3">
                                 {[
                                     "Conception backend en PHP : routing simple, formulaires et logique serveur",
@@ -174,7 +174,7 @@ function OuterWildsWiki() {
                                     "Expérimentations front : intégration Tailwind, éditeur riche et animations"
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start gap-3 text-gray-700">
-                                        <span className="text-green-500 font-bold">•</span>
+                                        <span className="text-orange-600 font-bold">•</span>
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -182,12 +182,12 @@ function OuterWildsWiki() {
                         </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-slate-800 via-indigo-900 to-purple-900 rounded-2xl p-6 lg:p-8 border border-indigo-700 text-center">
-                        <h3 className="text-lg lg:text-2xl font-bold text-white mb-3">
+                    <div className="bg-gradient-to-r from-orange-100 via-amber-100 to-yellow-100 rounded-2xl p-6 lg:p-8 border border-orange-300 text-center">
+                        <h3 className="text-lg lg:text-2xl font-bold text-gray-800 mb-3">
                             Projet universitaire (L2) — focus backend
                         </h3>
-                        <p className="text-indigo-200 mb-4 text-sm lg:text-base">
-                            Le design n’était pas l’objectif principal : c’est surtout un projet d’apprentissage et d’expérimentation.
+                        <p className="text-gray-700 mb-4 text-sm lg:text-base">
+                            Le design n'était pas l'objectif principal : c'est surtout un projet d'apprentissage et d'expérimentation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center">
                             <a 

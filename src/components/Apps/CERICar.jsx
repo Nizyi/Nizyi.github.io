@@ -71,21 +71,21 @@ function CERICar() {
         <div className="h-full w-full flex flex-col lg:flex-row">
             
             {/* Sidebar */}
-            <div className="lg:w-1/3 bg-gradient-to-br from-blue-600 to-indigo-800 border-b-2 lg:border-b-0 lg:border-r-2 border-blue-500 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
+            <div className="lg:w-1/3 bg-gradient-to-br from-blue-100 to-indigo-200 border-b-2 lg:border-b-0 lg:border-r-2 border-blue-300 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
                 
-                <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-blue-400 to-indigo-500 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
+                <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
                     <VscRocket className="text-4xl lg:text-6xl text-white" />
                 </div>
 
-                <h1 className="text-2xl lg:text-4xl font-bold text-white mb-2 lg:mb-4 text-center">
+                <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-2 lg:mb-4 text-center">
                     CERICar
                 </h1>
-                <p className="text-base lg:text-xl text-blue-100 text-center mb-6 lg:mb-8 px-4">
+                <p className="text-base lg:text-xl text-gray-700 text-center mb-6 lg:mb-8 px-4">
                     Application web de covoiturage
                 </p>
 
                 <div className="w-full">
-                    <h3 className="text-lg lg:text-xl font-bold text-blue-200 mb-3 lg:mb-4 text-center">
+                    <h3 className="text-lg lg:text-xl font-bold text-blue-700 mb-3 lg:mb-4 text-center">
                         🛠️ Technologies
                     </h3>
                     <div className="flex flex-wrap gap-2 justify-center">
@@ -222,7 +222,7 @@ function CERICar() {
                         <h2 className="text-xl lg:text-2xl font-bold text-blue-600 mb-4 lg:mb-6 border-b-2 border-blue-200 pb-2">
                             💡 Ce que j'apprends
                         </h2>
-                        <div className="bg-green-50 rounded-2xl p-4 lg:p-6 border border-green-200">
+                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 lg:p-6 border border-blue-200">
                             <ul className="space-y-3">
                                 {[
                                     "Architecture MVC et bonnes pratiques de développement web",
@@ -235,7 +235,7 @@ function CERICar() {
                                     "Design responsive et accessibilité multi-plateformes"
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start gap-3 text-gray-700">
-                                        <span className="text-green-500 font-bold">•</span>
+                                        <span className="text-blue-600 font-bold">•</span>
                                         <span>{item}</span>
                                     </li>
                                 ))}
@@ -243,15 +243,15 @@ function CERICar() {
                         </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-blue-600 via-indigo-700 to-blue-800 rounded-2xl p-6 lg:p-8 border border-blue-500 text-center">
-                        <h3 className="text-lg lg:text-2xl font-bold text-white mb-3">
+                    <div className="bg-gradient-to-r from-blue-100 via-indigo-100 to-blue-200 rounded-2xl p-6 lg:p-8 border border-blue-300 text-center">
+                        <h3 className="text-lg lg:text-2xl font-bold text-gray-800 mb-3">
                             🚧 Projet universitaire en développement - L3 Informatique
                         </h3>
-                        <p className="text-blue-100 mb-4 text-sm lg:text-base">
+                        <p className="text-gray-700 mb-4 text-sm lg:text-base">
                             Développé dans le cadre de l'UCE AMS à l'Université d'Avignon. 
                             Le projet suit un planning structuré en 5 étapes validées progressivement.
                         </p>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-lg text-sm text-white">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-lg text-sm text-white">
                             <VscDatabase size={18} />
                             <span>Base de données partagée PostgreSQL</span>
                         </div>

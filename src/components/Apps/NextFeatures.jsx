@@ -1,72 +1,73 @@
-import { VscCode, VscTrash, VscNewFile, VscEdit, VscFolder, VscMenu, VscCircleFilled } from 'react-icons/vsc';
+import { VscCode, VscTrash, VscNewFile, VscEdit, VscFolder, VscMenu, VscCircleFilled, VscCheck } from 'react-icons/vsc';
 
 function NextFeatures() {
     const features = [
         {
-            category: "🎯 Dock",
-            status: "planned",
+            category: "📁 Explorateur de fichiers",
+            status: "in-progress",
             items: [
-                { text: "Afficher les applications ouvertes dans le dock", priority: "high" },
-                { text: "Remplacer les apps placebo par de vraies applications", priority: "high" }
+                { text: "Afficher le chemin du dossier actuel", priority: "high", completed: true },
+                { text: "Navigation avec boutons Précédent/Suivant", priority: "medium", completed: true },
+                { text: "Gérer le responsive pour mobile", priority: "low", completed: false },
+                { text: "Vue en arborescence", priority: "low", completed: false },
+                { text: "Barre de recherche", priority: "low", completed: false }
+            ]
+        },
+        {
+            category: "🎯 Dock",
+            status: "in-progress",
+            items: [
+                { text: "Dock fonctionnel avec navigation", priority: "high", completed: true },
+                { text: "Bouton Home (non fonctionnel)", priority: "high", completed: true },
+                { text: "Afficher les applications ouvertes dans le dock", priority: "high", completed: false },
+                { text: "Remplacer les apps placebo par de vraies applications", priority: "high", completed: false }
             ]
         },
         {
             category: "🖱️ Menu interactif (clic droit)",
             status: "planned",
             items: [
-                { text: "Menu contextuel pour les apps sur le bureau", priority: "high" },
-                { text: "Options : Supprimer, Créer, Renommer", priority: "high" },
-                { text: "Menu contextuel pour le dock", priority: "medium" }
+                { text: "Menu contextuel pour les apps sur le bureau", priority: "high", completed: false },
+                { text: "Options : Supprimer, Créer, Renommer", priority: "high", completed: false },
+                { text: "Menu contextuel pour le dock", priority: "medium", completed: false }
             ]
         },
         {
             category: "🎵 Spotify Integration",
             status: "research",
             items: [
-                { text: "Mini lecteur Spotify intégré", priority: "medium" },
-                { text: "Connexion sécurisée (OAuth hors application)", priority: "high" },
-                { text: "Contrôles de lecture (play, pause, skip)", priority: "low" },
-                { text: "Affichage de la musique en cours", priority: "low" }
+                { text: "Mini lecteur Spotify intégré", priority: "medium", completed: false },
+                { text: "Connexion sécurisée (OAuth hors application)", priority: "high", completed: false },
+                { text: "Contrôles de lecture (play, pause, skip)", priority: "low", completed: false },
+                { text: "Affichage de la musique en cours", priority: "low", completed: false }
             ]
         },
         {
             category: "✋ Drag & Drop",
             status: "planned",
             items: [
-                { text: "Déplacer les icônes sur le bureau", priority: "medium" },
-                { text: "Organiser les apps dans les dossiers", priority: "medium" },
-                { text: "Réorganiser les items du dock", priority: "low" }
+                { text: "Déplacer les icônes sur le bureau", priority: "medium", completed: false },
+                { text: "Organiser les apps dans les dossiers", priority: "medium", completed: false },
+                { text: "Réorganiser les items du dock", priority: "low", completed: false }
             ]
         },
         {
             category: "🚀 Menu démarrer",
             status: "planned",
             items: [
-                { text: "Liste de toutes les applications", priority: "high" },
-                { text: "Menu d'alimentation (Redémarrer, Éteindre)", priority: "low" },
-                { text: "Recherche d'applications", priority: "medium" },
-                { text: "Applications récentes", priority: "low" }
-            ]
-        },
-        {
-            category: "📁 Explorateur de fichiers",
-            status: "in-progress",
-            items: [
-                { text: "Afficher le chemin du dossier actuel", priority: "high" },
-                { text: "Navigation avec boutons Précédent/Suivant", priority: "medium" },
-                { text: "Gérer le responsive pour mobile", priority: "low" },
-                { text: "Vue en arborescence", priority: "low" },
-                { text: "Barre de recherche", priority: "low" }
-
+                { text: "Liste de toutes les applications", priority: "high", completed: false },
+                { text: "Menu d'alimentation (Redémarrer, Éteindre)", priority: "low", completed: false },
+                { text: "Recherche d'applications", priority: "medium", completed: false },
+                { text: "Applications récentes", priority: "low", completed: false }
             ]
         },
         {
             category: "🔲 Sélection multiple",
             status: "planned",
             items: [
-                { text: "Sélectionner plusieurs icônes avec Ctrl+Clic", priority: "medium" },
-                { text: "Zone de sélection (drag pour sélectionner)", priority: "low" },
-                { text: "Actions groupées (supprimer, déplacer)", priority: "low" },
+                { text: "Sélectionner plusieurs icônes avec Ctrl+Clic", priority: "medium", completed: false },
+                { text: "Zone de sélection (drag pour sélectionner)", priority: "low", completed: false },
+                { text: "Actions groupées (supprimer, déplacer)", priority: "low", completed: false },
             ]
         }
     ];
@@ -146,6 +147,10 @@ function NextFeatures() {
                         <VscCircleFilled className="text-green-600" />
                         <span>Basse priorité</span>
                     </div>
+                    <div className="flex items-center gap-2">
+                        <VscCheck className="text-green-600" />
+                        <span>Terminé</span>
+                    </div>
                 </div>
 
                 {/* Liste des fonctionnalités */}
@@ -173,13 +178,24 @@ function NextFeatures() {
                                 {feature.items.map((item, itemIdx) => (
                                     <li
                                         key={itemIdx}
-                                        className="p-4 hover:bg-gray-50 transition-colors flex items-start gap-3"
+                                        className={`p-4 hover:bg-gray-50 transition-colors flex items-start gap-3 ${
+                                            item.completed ? 'opacity-60' : ''
+                                        }`}
                                     >
-                                        <VscCircleFilled
-                                            className={`mt-1 flex-shrink-0 ${getPriorityColor(item.priority)}`}
-                                            size={12}
-                                        />
-                                        <span className="text-gray-700">{item.text}</span>
+                                        {item.completed ? (
+                                            <VscCheck
+                                                className="mt-1 flex-shrink-0 text-green-600"
+                                                size={16}
+                                            />
+                                        ) : (
+                                            <VscCircleFilled
+                                                className={`mt-1 flex-shrink-0 ${getPriorityColor(item.priority)}`}
+                                                size={12}
+                                            />
+                                        )}
+                                        <span className={`text-gray-700 ${item.completed ? 'line-through' : ''}`}>
+                                            {item.text}
+                                        </span>
                                     </li>
                                 ))}
                             </ul>

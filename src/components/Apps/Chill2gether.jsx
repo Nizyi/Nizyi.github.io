@@ -37,21 +37,21 @@ function Chill2gether() {
         <div className="h-full w-full flex flex-col lg:flex-row">
             
             {/* Sidebar */}
-            <div className="lg:w-1/3 bg-gradient-to-br from-slate-800 to-purple-900 border-b-2 lg:border-b-0 lg:border-r-2 border-purple-700 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
+            <div className="lg:w-1/3 bg-gradient-to-br from-purple-100 to-blue-200 border-b-2 lg:border-b-0 lg:border-r-2 border-purple-300 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
                 
                 <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
                     <VscRocket className="text-4xl lg:text-6xl text-white" />
                 </div>
 
-                <h1 className="text-2xl lg:text-4xl font-bold text-white mb-2 lg:mb-4 text-center">
+                <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-2 lg:mb-4 text-center">
                     Chill2gether
                 </h1>
-                <p className="text-base lg:text-xl text-gray-300 text-center mb-6 lg:mb-8 px-4">
+                <p className="text-base lg:text-xl text-gray-700 text-center mb-6 lg:mb-8 px-4">
                     Regardez des vidéos ensemble, en temps réel
                 </p>
 
                 <div className="w-full">
-                    <h3 className="text-lg lg:text-xl font-bold text-purple-300 mb-3 lg:mb-4 text-center">
+                    <h3 className="text-lg lg:text-xl font-bold text-purple-700 mb-3 lg:mb-4 text-center">
                         🛠️ Technologies
                     </h3>
                     <div className="flex flex-wrap gap-2 justify-center">
@@ -120,41 +120,41 @@ function Chill2gether() {
                             🚀 Fonctionnalités à venir
                         </h2>
                         <div className="space-y-4">
-                            <div className="bg-blue-50 rounded-xl p-5 border border-blue-200">
-                                <h3 className="font-bold text-blue-700 mb-3">🎯 Priorité haute</h3>
+                            <div className="bg-purple-50 rounded-xl p-5 border border-purple-200">
+                                <h3 className="font-bold text-purple-700 mb-3">🎯 Priorité haute</h3>
                                 <ul className="space-y-2 text-sm text-gray-700">
                                     <li className="flex items-start gap-2">
-                                        <span className="text-blue-500">•</span>
+                                        <span className="text-purple-500">•</span>
                                         <span>Synchronisation complète de la vidéo (play/pause/seek)</span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-blue-500">•</span>
+                                        <span className="text-purple-500">•</span>
                                         <span>Chat en temps réel avec historique</span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-blue-500">•</span>
+                                        <span className="text-purple-500">•</span>
                                         <span>File d'attente de vidéos (playlist collaborative)</span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-blue-500">•</span>
+                                        <span className="text-purple-500">•</span>
                                         <span>Gestion de la salle (kick, admin, permissions)</span>
                                     </li>
                                 </ul>
                             </div>
 
-                            <div className="bg-green-50 rounded-xl p-5 border border-green-200">
-                                <h3 className="font-bold text-green-700 mb-3">🔐 Fonctionnalités importantes</h3>
+                            <div className="bg-purple-50 rounded-xl p-5 border border-purple-200">
+                                <h3 className="font-bold text-purple-700 mb-3">🔐 Fonctionnalités importantes</h3>
                                 <ul className="space-y-2 text-sm text-gray-700">
                                     <li className="flex items-start gap-2">
-                                        <span className="text-green-500">•</span>
+                                        <span className="text-purple-500">•</span>
                                         <span>Création de comptes utilisateurs persistants</span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-green-500">•</span>
+                                        <span className="text-purple-500">•</span>
                                         <span>Support multi-plateformes (Twitch, Vimeo, etc.)</span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-green-500">•</span>
+                                        <span className="text-purple-500">•</span>
                                         <span>Page d'aide et mentions légales</span>
                                     </li>
                                 </ul>
@@ -203,11 +203,11 @@ function Chill2gether() {
                         </div>
                     </div>
 
-                    <div className="bg-gradient-to-r from-slate-800 via-purple-900 to-blue-900 rounded-2xl p-6 lg:p-8 border border-purple-700 text-center">
-                        <h3 className="text-lg lg:text-2xl font-bold text-white mb-3">
+                    <div className="bg-gradient-to-r from-purple-100 via-blue-100 to-cyan-100 rounded-2xl p-6 lg:p-8 border border-purple-300 text-center">
+                        <h3 className="text-lg lg:text-2xl font-bold text-gray-800 mb-3">
                             🚧 Projet en cours de développement
                         </h3>
-                        <p className="text-purple-200 mb-4 text-sm lg:text-base">
+                        <p className="text-gray-700 mb-4 text-sm lg:text-base">
                             Chill2gether est activement développé dans le cadre d'un projet universitaire (L3). 
                             De nouvelles fonctionnalités sont ajoutées régulièrement !
                         </p>

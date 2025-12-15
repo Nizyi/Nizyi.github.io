@@ -160,17 +160,17 @@ function AMS() {
                         <h2 className="text-xl lg:text-2xl font-bold text-teal-600 mb-4 lg:mb-6 border-b-2 border-teal-200 pb-2">
                             💡 Ce que j'ai appris
                         </h2>
-                        <div className="bg-green-50 rounded-2xl p-4 lg:p-6 border border-green-200">
+                        <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-4 lg:p-6 border border-teal-200">
                             <ul className="space-y-3">
                                 {[
-                                    "Automatiser l’exécution de scripts et manipuler des sorties JSON (Python / Bash)",
+                                    "Automatiser l'exécution de scripts et manipuler des sorties JSON (Python / Bash)",
                                     "Stocker et requêter des mesures dans SQLite pour du monitoring léger",
                                     "Créer une interface web minimale avec Flask + templates",
                                     "Générer des graphiques côté serveur avec Matplotlib et les intégrer à une page web",
                                     "Récupérer des informations via scraping (Requests + BeautifulSoup)"
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start gap-3 text-gray-700">
-                                        <span className="text-green-500 font-bold">•</span>
+                                        <span className="text-teal-600 font-bold">•</span>
                                         <span>{item}</span>
                                     </li>
                                 ))}

@@ -158,17 +158,17 @@ function Compilateur() {
                         <h2 className="text-xl lg:text-2xl font-bold text-yellow-600 mb-4 lg:mb-6 border-b-2 border-yellow-200 pb-2">
                             💡 Ce que j'ai appris
                         </h2>
-                        <div className="bg-green-50 rounded-2xl p-4 lg:p-6 border border-green-200">
+                        <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-2xl p-4 lg:p-6 border border-yellow-200">
                             <ul className="space-y-3">
                                 {[
-                                    "Concevoir une grammaire simple et l’implémenter avec un parseur récursif descendant",
+                                    "Concevoir une grammaire simple et l'implémenter avec un parseur récursif descendant",
                                     "Écrire/adapter un scanner Flex pour reconnaître tokens, mots-clés et opérateurs",
                                     "Mettre en place une table des symboles et des contrôles de types (dont SET)",
-                                    "Générer de l’assembleur x86-64 (AT&T) : pile, labels, appels à printf/puts",
+                                    "Générer de l'assembleur x86-64 (AT&T) : pile, labels, appels à printf/puts",
                                     "Tester et déboguer la chaîne complète (source → .s → exécutable via GCC)"
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start gap-3 text-gray-700">
-                                        <span className="text-green-500 font-bold">•</span>
+                                        <span className="text-yellow-600 font-bold">•</span>
                                         <span>{item}</span>
                                     </li>
                                 ))}

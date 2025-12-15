@@ -1,4 +1,4 @@
-import { VscClose } from "react-icons/vsc";
+import { VscClose, VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 import { Rnd } from "react-rnd";
 import { lazy, Suspense } from "react";
 import AppIcons from "./AppIcons";
@@ -28,7 +28,16 @@ function Window({
   onFocus,
   onItemClick,
   zIndex,
+  onGoBack,
+  onGoForward,
+  canGoBack,
+  canGoForward,
 }) {
+  const formatPath = (path) => {
+    if (!path) return title;
+    return path.split("/").filter((p) => p).join(" > ");
+  };
+
   const renderContent = () => {
     if (windowType === "app") {
       const AppComponent = appsComponents[appName];
@@ -92,7 +101,30 @@ function Window({
       >
         {/* Barre de titre */}
         <div className="bg-orange-200 h-10 flex items-center justify-between px-4 border-b border-orange-300 title-bar cursor-move">
-          <span className="font-medium text-sm">{title}</span>
+          {/* Boutons de navigation */}
+          {windowType === "folder" && (
+            <div className="flex gap-2">
+              <button
+                onClick={() => onGoBack()}
+                disabled={!canGoBack}
+                className="p-1 rounded bg-orange-300 hover:bg-orange-400 transition-colors disabled:opacity-30 disabled:hover:bg-orange-300"
+              >
+                <VscChevronLeft size={18} />
+              </button>
+              <button
+                onClick={() => onGoForward()}
+                disabled={!canGoForward}
+                className="p-1 rounded bg-orange-300 hover:bg-orange-400 transition-colors disabled:opacity-30 disabled:hover:bg-orange-300"
+              >
+                <VscChevronRight size={18} />
+              </button>
+            </div>
+          )}
+
+          <span className="font-medium text-sm">
+            {formatPath(folderPath)}
+          </span>
+
           <button
             onClick={onClose}
             className="bg-red-300 rounded-full p-1 transition-colors hover:bg-red-400"

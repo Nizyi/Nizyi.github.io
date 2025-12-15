@@ -155,16 +155,15 @@ function Superette() {
                         <h2 className="text-xl lg:text-2xl font-bold text-blue-600 mb-4 lg:mb-6 border-b-2 border-blue-200 pb-2">
                             💡 Ce que j'ai appris
                         </h2>
-                        <div className="bg-green-50 rounded-2xl p-4 lg:p-6 border border-green-200">
+                        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 lg:p-6 border border-blue-200">
                             <ul className="space-y-3">
                                 {[
-                                    "Modélisation d’une base relationnelle (tables, relations, contraintes)",
+                                    "Modélisation d'une base relationnelle (tables, relations, contraintes)",
                                     "Requêtes SQL (jointures, agrégations) et exploitation via JDBC",
-                                    "Récupération de structure via metadata (tables/colonnes) pour guider des actions en CLI",
-                                    "Mise en place de règles “métier” simples (statuts, dates, réduction promo)"
+                                    "Récupération de structure via metadata (tables/colonnes) pour guider des actions en CLI"
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start gap-3 text-gray-700">
-                                        <span className="text-green-500 font-bold">•</span>
+                                        <span className="text-blue-600 font-bold">•</span>
                                         <span>{item}</span>
                                     </li>
                                 ))}

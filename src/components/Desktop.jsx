@@ -35,7 +35,6 @@ function Desktop() {
       type: 'app',
       title: appName,
       appName,
-      zIndex: getMaxZIndex() + 1,
     }]);
     setAppFocus(appName);
   };
@@ -48,11 +47,13 @@ function Desktop() {
       return;
     }
 
-    setOpenWindows([...openWindows, {
-      id: Date.now(),
+    setOpenWindows([...openWindows, { 
+      id: Date.now(), 
       type: 'folder',
       title: folderName,
       folderPath,
+      history: [folderPath],      // ← Ajoute ça
+      historyIndex: 0,             // ← Ajoute ça
       zIndex: getMaxZIndex() + 1,
     }]);
     setAppFocus(folderName);
@@ -68,11 +69,19 @@ function Desktop() {
     setAppFocus(title);
   };
 
-  const handleItemClick = (item) => {
+  const handleItemClick = (item, windowId = null) => {
     if (item.type === 'app') {
       handleOpenApp(item.name);
     } else if (item.type === 'folder') {
-      handleOpenFolder(item.name, item.path + '/' + item.name);
+      const newPath = item.path + '/' + item.name;
+      
+      // Si on clique depuis une fenêtre existante, on navigue dedans
+      if (windowId) {
+        handleFolderNavigation(windowId, newPath);
+      } else {
+        // Sinon, on ouvre une nouvelle fenêtre (depuis le desktop)
+        handleOpenFolder(item.name, newPath);
+      }
     }
   };
 
@@ -85,6 +94,49 @@ function Desktop() {
       onClick: () => handleItemClick(item)
     };
   });
+
+  const handleFolderNavigation = (windowId, newPath) => {
+    setOpenWindows(openWindows.map(window => {
+      if (window.id !== windowId) return window;
+      
+      const newHistory = [...window.history.slice(0, window.historyIndex + 1), newPath];
+      return {
+        ...window,
+        folderPath: newPath,
+        history: newHistory,
+        historyIndex: newHistory.length - 1
+      };
+    }));
+    
+    // Mettre à jour le focus avec le nouveau chemin
+    setAppFocus(newPath.split('/').pop()); // Affiche le nom du dernier dossier
+  };
+
+  const handleGoBack = (windowId) => {
+    setOpenWindows(openWindows.map(window => {
+      if (window.id !== windowId || window.historyIndex === 0) return window;
+      
+      const newIndex = window.historyIndex - 1;
+      return {
+        ...window,
+        folderPath: window.history[newIndex],
+        historyIndex: newIndex
+      };
+    }));
+  };
+
+  const handleGoForward = (windowId) => {
+    setOpenWindows(openWindows.map(window => {
+      if (window.id !== windowId || window.historyIndex >= window.history.length - 1) return window;
+      
+      const newIndex = window.historyIndex + 1;
+      return {
+        ...window,
+        folderPath: window.history[newIndex],
+        historyIndex: newIndex
+      };
+    }));
+  };
 
   return (
     <div className="relative h-screen w-screen">
@@ -105,9 +157,13 @@ function Desktop() {
           title={window.title}
           appName={window.type === 'app' ? window.appName : undefined}
           folderPath={window.type === 'folder' ? window.folderPath : undefined}
+          canGoBack={window.history ? window.historyIndex > 0 : false}
+          canGoForward={window.history ? window.historyIndex < window.history.length - 1 : false}
+          onGoBack={() => handleGoBack(window.id)}
+          onGoForward={() => handleGoForward(window.id)}
           onClose={() => handleCloseWindow(window.id)}
           onFocus={() => handleWindowFocus(window.id, window.title)}
-          onItemClick={handleItemClick}
+          onItemClick={(item) => handleItemClick(item, window.id)} // ← Passer window.id
           zIndex={window.zIndex}
         />
       ))}

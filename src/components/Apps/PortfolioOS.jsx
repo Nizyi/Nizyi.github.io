@@ -134,7 +134,7 @@ function PortfolioOS() {
                         <h2 className="text-xl lg:text-2xl font-bold text-orange-600 mb-4 lg:mb-6 border-b-2 border-orange-200 pb-2">
                             🚀 Évolutions futures
                         </h2>
-                        <div className="bg-blue-50 rounded-2xl p-4 lg:p-6 border border-blue-200 text-sm lg:text-base text-gray-700">
+                        <div className="bg-orange-50 rounded-2xl p-4 lg:p-6 border border-orange-200 text-sm lg:text-base text-gray-700">
                             Ce projet sera constamment mis à jour, pour voir les futures fonctionnalités prévues,
                             consultez le fichier <strong>"NextFeatures"</strong> sur le bureau.
                         </div>

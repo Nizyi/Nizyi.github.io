@@ -18,8 +18,25 @@ export const appsConfig = {
         type: 'folder',
         iconName: 'VscFolder',
         path: '/Desktop',
+        isPermanent: true,    
+    },
+
+    Web: {
+        id: 'folder-web',
+        name: 'Web',
+        type: 'folder',
+        iconName: 'VscFolder',
+        path: '/Desktop/Projects',
         isPermanent: true,
-        children: ['test-app', 'portfolioos-app', 'outerwildswiki-app', 'superette-app', 'searchmotor-app', 'labyrinthe-app', 'ams-app', 'compilateur-app'],
+    },
+
+    Dev: {
+        id: 'folder-dev',
+        name: 'Dev',
+        type: 'folder',
+        iconName: 'VscFolder',
+        path: '/Desktop/Projects',
+        isPermanent: true,
     },
 
     Cv: {
@@ -46,7 +63,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'PortfolioOS',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Web',
         isPermanent: true,
     },
     OuterWilds: {
@@ -55,7 +72,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'OuterWilds',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Web',
         isPermanent: true,
     },
     Superette: {
@@ -64,7 +81,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Superette',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Dev',
         isPermanent: true,
     },
     SearchEngine: {
@@ -73,7 +90,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'SearchEngine',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Dev',
         isPermanent: true,
     },
     Labyrinthe: {
@@ -82,7 +99,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Labyrinthe',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Dev',
         isPermanent: true,
     },
     Ams: {
@@ -91,7 +108,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Ams',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Dev',
         isPermanent: true,
     },
     Compilateur: {
@@ -100,7 +117,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Compilateur',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Dev',
         isPermanent: true,
     },
     Chill2gether: {
@@ -109,7 +126,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'Chill2gether',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Web',
         isPermanent: true,
     },
     CERICar: {
@@ -118,7 +135,7 @@ export const appsConfig = {
         type: 'app',
         iconName: 'VscRocket',
         component: 'CERICar',
-        path: '/Desktop/Projects',
+        path: '/Desktop/Projects/Web',
         isPermanent: true,
     },
 };
