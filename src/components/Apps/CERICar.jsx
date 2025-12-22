@@ -117,7 +117,7 @@ function CERICar() {
                         </h2>
                         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 lg:p-6 border border-blue-200">
                             <p className="text-sm lg:text-base text-gray-700 leading-relaxed mb-4">
-                                <strong>CERICar</strong> est une application web de covoiturage similaire à BlaBlaCar, développée dans le cadre de l'UCE <strong>AMS – Concevoir et développer une application WEB</strong> en L3 Informatique à l'Université d'Avignon. Le projet utilise le framework <strong>Yii</strong> avec le patron de conception <strong>MVC</strong> et l'ORM <strong>ActiveRecord</strong>.
+                                <strong>CERICar</strong> est une application web de covoiturage similaire à BlaBlaCar, développée dans le cadre de l'AMS – Concevoir et développer une application WEB en L3 Informatique à l'Université d'Avignon. Le projet utilise le framework <strong>Yii</strong> avec le patron de conception <strong>MVC</strong> et l'ORM <strong>ActiveRecord</strong>.
                             </p>
                             <p className="text-sm lg:text-base text-gray-700 leading-relaxed">
                                 L'application permet aux utilisateurs de rechercher des voyages, de réserver des places, et aux conducteurs de proposer des trajets. Le moteur de recherche gère automatiquement les correspondances entre différents conducteurs en respectant les contraintes temporelles.
