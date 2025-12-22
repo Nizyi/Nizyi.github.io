@@ -143,10 +143,10 @@ export const appsConfig = {
 // Configuration pour le Dock
 export const dockItems = [
     {
-        iconName: 'VscHome',
-        label: 'Home',
-        appName: null,
-        type: 'button'
+        iconName: 'VscSettingsGear',
+        label: 'Wallpaper',
+        appName: 'Wallpaper',
+        type: 'app'
     },
     {
         iconName: 'VscFolder',
@@ -168,7 +168,6 @@ export const dockItems = [
     }
 ];
 
-// Fonction utilitaire pour récupérer les items d'un dossier
 export const getItemsInFolder = (folderPath) => {
     return Object.values(appsConfig).filter(item => item.path === folderPath);
 };
