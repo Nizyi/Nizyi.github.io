@@ -1,16 +1,22 @@
 import { useState } from 'react';
 import { VscChevronLeft, VscChevronRight } from 'react-icons/vsc';
 
-import wallpaper1 from '../assets/wallpapers/nuageguy.jpg';
+import wallpaper1 from '../assets/wallpapers/bubble_cat.jpg';
 import wallpaper2 from '../assets/wallpapers/nuageguy2.jpg';
-import wallpaper3 from '../assets/wallpapers/fleurs.jpg';
-import wallpaper4 from '../assets/wallpapers/wallpaper.jpg';
+import wallpaper3 from '../assets/wallpapers/cat_paper.jpg';
+import wallpaper4 from '../assets/wallpapers/fall_cat.jpg';
+import wallpaper5 from '../assets/wallpapers/fishbag.jpg';
+import wallpaper6 from '../assets/wallpapers/wheat_cat.jpg';
+
+
 
 const wallpapers = [
-    { id: 1, name: 'Nuages', path: wallpaper1 },
-    { id: 2, name: 'Nuages 2', path: wallpaper2 },
-    { id: 3, name: 'Fleurs', path: wallpaper3 },
-    { id: 4, name: 'Wallpaper', path: wallpaper4 },
+    { id: 1, name: 'Bubble cat', path: wallpaper1 },
+    { id: 2, name: 'Clouds cat', path: wallpaper2 },
+    { id: 3, name: 'Paper cat', path: wallpaper3 },
+    { id: 4, name: 'Fall cat', path: wallpaper4 },
+    { id: 5, name: 'Fish bag', path: wallpaper5 },
+    { id: 6, name: 'Wheat cat', path: wallpaper6 },
 ];
 
 function Wallpaper({ currentWallpaper, onWallpaperChange, onClose }) {
@@ -107,6 +113,11 @@ function Wallpaper({ currentWallpaper, onWallpaperChange, onClose }) {
                 {/* compteur */}
                 <p className="text-white/70 text-xs text-center mt-2">
                     {currentIndex + 1} / {wallpapers.length}
+                </p>
+
+                {/* credit */}
+                <p className="text-white/50 text-[10px] text-center mt-1">
+                    source X : @neko_fton
                 </p>
             </div>
         </div>
