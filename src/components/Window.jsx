@@ -127,7 +127,7 @@ function Window({
 
           <button
             onClick={onClose}
-            className="bg-red-300 rounded-full p-1 transition-colors hover:bg-red-400"
+            className="bg-red-300 rounded-full p-1 transition-colors hover:bg-red-400 hover:border-orange-500"
           >
             <VscClose size={18} />
           </button>

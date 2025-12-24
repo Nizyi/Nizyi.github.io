@@ -92,14 +92,14 @@ function App() {
                         },
                         {
                             title: 'Chill2gether',
-                            period: '2025–2026',
+                            period: 'En cours',
                             context: 'Projet universitaire — L3',
                             description: 'Application de streaming collaboratif avec synchronisation vidéo en temps réel et gestion de rooms.',
                             tech: 'React, Node.js, Socket.io, PostgreSQL'
                         },
                         {
                             title: 'CERICar',
-                            period: '2025–2026',
+                            period: 'En cours',
                             context: 'Projet universitaire — L3',
                             description: 'Application web de covoiturage avec moteur de recherche intelligent, gestion des correspondances et réservations.',
                             tech: 'PHP, Yii Framework, PostgreSQL, jQuery Ajax'
@@ -154,7 +154,7 @@ function App() {
                         },
                         {
                             title: 'Labyrinthe',
-                            period: '2023',
+                            period: '2024',
                             description: 'Jeu en terminal avec génération procédurale et résolution DFS.',
                             tech: 'C++, ncurses'
                         }].map((p, i, arr) => (
@@ -183,7 +183,7 @@ function App() {
                             <h3 className="font-bold text-amber-700">
                                 Licence Informatique Générale — Université d'Avignon
                             </h3>
-                            <p className="text-sm text-gray-600 mb-2">2022 – 2025</p>
+                            <p className="text-sm text-gray-600 mb-2">2023 – En cours</p>
                             <p className="text-sm text-gray-700">
                                 Programmation orientée objet, développement web, bases de données,
                                 algorithmique, systèmes et analyse de données.
@@ -194,7 +194,7 @@ function App() {
                             <h3 className="font-bold text-yellow-700">
                                 Baccalauréat Général — Spécialités Mathématiques & NSI
                             </h3>
-                            <p className="text-sm text-gray-600">2022</p>
+                            <p className="text-sm text-gray-600">2023</p>
                         </div>
                     </div>
                 </div>

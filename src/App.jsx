@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import LoginScreen from './components/LoginScreen';
 import Desktop from './components/Desktop';
+import FeteNotification from './components/FeteNotification';
 
-// Import du wallpaper par défaut
 import defaultWallpaper from './assets/wallpapers/nuageguy2.jpg';
 
 function App() {
@@ -41,6 +41,7 @@ function App() {
             </div>
           )}
       </div>
+      {showDesktop && <FeteNotification />}
     </div>
   );
 }
