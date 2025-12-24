@@ -1,4 +1,5 @@
 import {VscSearch, VscAccount, VscCalendar, VscDatabase, VscRocket } from 'react-icons/vsc';
+import { FcShipped } from 'react-icons/fc';
 
 function CERICar() {
     const features = [
@@ -74,7 +75,7 @@ function CERICar() {
             <div className="lg:w-1/3 bg-gradient-to-br from-blue-100 to-indigo-200 border-b-2 lg:border-b-0 lg:border-r-2 border-blue-300 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
                 
                 <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
-                    <VscRocket className="text-4xl lg:text-6xl text-white" />
+                    <FcShipped className="text-4xl lg:text-6xl text-white" />
                 </div>
 
                 <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-2 lg:mb-4 text-center">

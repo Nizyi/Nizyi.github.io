@@ -1,4 +1,5 @@
 import { VscGithub, VscSymbolNamespace, VscGear, VscFileBinary, VscRegex } from 'react-icons/vsc';
+import { FcCommandLine } from 'react-icons/fc';
 
 function Compilateur() {
     const features = [
@@ -36,7 +37,7 @@ function Compilateur() {
             <div className="lg:w-1/3 bg-gradient-to-br from-yellow-50 to-amber-50 border-b-2 lg:border-b-0 lg:border-r-2 border-yellow-200 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
                 
                 <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-yellow-400 to-amber-500 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
-                    <VscGear className="text-4xl lg:text-6xl text-white" />
+                    <FcCommandLine className="text-4xl lg:text-6xl text-white" />
                 </div>
 
                 <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-2 lg:mb-4 text-center">

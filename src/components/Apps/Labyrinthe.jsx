@@ -1,4 +1,5 @@
 import { VscGithub, VscSymbolArray, VscGraph, VscDebugAlt, VscMove } from 'react-icons/vsc';
+import { FcPuzzle } from 'react-icons/fc';
 
 function Labyrinthe() {
     const features = [
@@ -31,12 +32,12 @@ function Labyrinthe() {
 
     return (
         <div className="h-full w-full flex flex-col lg:flex-row">
-            
+
             {/* Sidebar */}
             <div className="lg:w-1/3 bg-gradient-to-br from-green-50 to-emerald-50 border-b-2 lg:border-b-0 lg:border-r-2 border-green-200 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
-                
-                <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-green-400 to-emerald-500 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
-                    <VscGraph className="text-4xl lg:text-6xl text-white" />
+
+                <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-green-200 rounded-3xl mb-4 lg:mb-6 shadow-2xl border-2 border-green-400">
+                    <FcPuzzle className="text-5xl lg:text-7xl" />
                 </div>
 
                 <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-2 lg:mb-4 text-center">
@@ -52,7 +53,7 @@ function Labyrinthe() {
                     </h3>
                     <div className="flex flex-wrap gap-2 justify-center">
                         {techStack.map((tech, index) => (
-                            <span 
+                            <span
                                 key={index}
                                 className={`px-3 py-2 ${tech.color} text-white rounded-lg text-xs lg:text-sm font-medium shadow-md hover:scale-105 transition-transform`}
                             >
@@ -63,8 +64,8 @@ function Labyrinthe() {
                 </div>
 
                 <div className="mt-6 lg:mt-8">
-                    <a 
-                        href="https://github.com/Nizyi/Maze_game" 
+                    <a
+                        href="https://github.com/Nizyi/Maze_game"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 lg:gap-3 px-4 lg:px-6 py-2 lg:py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 text-sm lg:text-base"
@@ -102,7 +103,7 @@ function Labyrinthe() {
                         </h2>
                         <div className="grid grid-cols-1 gap-4">
                             {features.map((feature, index) => (
-                                <div 
+                                <div
                                     key={index}
                                     className="bg-white rounded-xl p-4 lg:p-6 border border-gray-200 hover:shadow-lg transition-shadow"
                                 >
@@ -143,7 +144,7 @@ function Labyrinthe() {
                                     description: "Validation des déplacements selon les murs de la case (N/S/E/O) avec détection d’échec/victoire"
                                 }
                             ].map((item, index) => (
-                                <div 
+                                <div
                                     key={index}
                                     className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-5 border border-green-200"
                                 >
@@ -179,7 +180,7 @@ function Labyrinthe() {
                         <h3 className="text-lg lg:text-2xl font-bold text-gray-800 mb-3">
                             Projet universitaire - Informatique
                         </h3>
-                        <a 
+                        <a
                             href="https://github.com/Nizyi/Maze_game"
                             target="_blank"
                             rel="noopener noreferrer"

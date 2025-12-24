@@ -110,8 +110,13 @@ function Desktop({ onWallpaperChange, currentWallpaper }) {
   const desktopItems = getItemsInFolder("/Desktop");
   const itemsForDisplay = desktopItems.map((item) => {
     const IconComponent = iconComponents[item.iconName];
+    
+    const icon = typeof IconComponent === 'string' 
+      ? <img src={IconComponent} alt={item.name} className="w-[34px] h-[34px] object-contain" />
+      : (IconComponent ? <IconComponent size={34} /> : null);
+    
     return {
-      icon: IconComponent ? <IconComponent size={34} /> : null,
+      icon,
       label: item.name,
       onClick: () => handleItemClick(item),
     };
@@ -217,25 +222,30 @@ function Desktop({ onWallpaperChange, currentWallpaper }) {
       {/* Dock */}
       <Dock
         items={dockItems.map((item) => {
-          const IconComponent = iconComponents[item.iconName];
-          return {
-            ...item,
-            icon: IconComponent ? <IconComponent size={18} /> : null,
-            onClick: () => {
-              if (!item.appName) return;
+  const IconComponent = iconComponents[item.iconName];
+  
+  const icon = typeof IconComponent === 'string'
+    ? <img src={IconComponent} alt={item.label} className="w-[18px] h-[18px] object-contain" />
+    : (IconComponent ? <IconComponent size={18} /> : null);
+  
+  return {
+    ...item,
+    icon,
+    onClick: () => {
+      if (!item.appName) return;
 
-              if (item.type === "app") {
-                handleOpenApp(item.appName);
-              } else if (item.type === "folder") {
-                const folderConfig = appsConfig[item.appName];
-                handleOpenFolder(
-                  folderConfig.name,
-                  folderConfig.path + "/" + folderConfig.name,
-                );
-              }
-            },
-          };
-        })}
+      if (item.type === "app") {
+        handleOpenApp(item.appName);
+      } else if (item.type === "folder") {
+        const folderConfig = appsConfig[item.appName];
+        handleOpenFolder(
+          folderConfig.name,
+          folderConfig.path + "/" + folderConfig.name,
+        );
+      }
+    },
+  };
+})}
         panelHeight={30}
         baseItemSize={60}
         magnification={70}

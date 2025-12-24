@@ -1,4 +1,5 @@
 import { VscGithub, VscCode, VscFileCode, VscWindow, VscFolder, VscRocket } from 'react-icons/vsc';
+import logoAuriel from '../../assets/logo_temp.png';
 
 function PortfolioOS() {
     const features = [
@@ -40,7 +41,7 @@ function PortfolioOS() {
                 
                 {/* Logo */}
                 <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-orange-400 to-rose-500 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
-                    <VscRocket className="text-4xl lg:text-6xl text-white" />
+                    <img src={logoAuriel} alt="Auriel Logo" className="w-12 h-12 lg:w-24 lg:h-24 object-contain" />
                 </div>
 
                 {/* Titre et description */}

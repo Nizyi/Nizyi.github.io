@@ -1,4 +1,5 @@
 import { VscGithub, VscBook, VscGlobe, VscRocket, VscExtensions } from 'react-icons/vsc';
+import logoOuterWilds from '../../assets/outerwilds_logo.png';
 
 function OuterWildsWiki() {
     const features = [
@@ -43,7 +44,7 @@ function OuterWildsWiki() {
             <div className="lg:w-1/3 bg-gradient-to-br from-orange-100 to-yellow-100 border-b-2 lg:border-b-0 lg:border-r-2 border-orange-300 p-6 lg:p-8 flex flex-col justify-center items-center lg:overflow-hidden">
                 
                 <div className="w-20 h-20 lg:w-32 lg:h-32 inline-flex items-center justify-center bg-gradient-to-br from-orange-500 to-amber-600 rounded-3xl mb-4 lg:mb-6 shadow-2xl">
-                    <VscRocket className="text-4xl lg:text-6xl text-white" />
+                    <img src={logoOuterWilds} alt="Outer Wilds Logo" className="w-18 h-18 lg:w-24 lg:h-24 object-contain" />
                 </div>
 
                 <h1 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-2 lg:mb-4 text-center">

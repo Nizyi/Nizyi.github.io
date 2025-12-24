@@ -54,8 +54,21 @@ function Window({
       const itemsInFolder = getItemsInFolder(folderPath);
       const itemsForDisplay = itemsInFolder.map((item) => {
         const IconComponent = iconComponents[item.iconName];
+
+        // Vérifier si c'est une image (string) ou un composant
+        const icon =
+          typeof IconComponent === "string" ? (
+            <img
+              src={IconComponent}
+              alt={item.name}
+              className="w-[34px] h-[34px] object-contain"
+            />
+          ) : IconComponent ? (
+            <IconComponent size={34} />
+          ) : null;
+
         return {
-          icon: IconComponent ? <IconComponent size={34} /> : null,
+          icon,
           label: item.name,
           onClick: () => onItemClick(item),
         };
