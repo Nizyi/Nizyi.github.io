@@ -68,9 +68,15 @@ function Chill2gether() {
                 </div>
 
                 <div className="mt-6 lg:mt-8">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-600 text-white rounded-lg text-sm font-semibold">
-                        🚧 En cours de développement
-                    </span>
+                    <a 
+                        href="https://github.com/tidic84/chill2gether" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                    >
+                        <VscGithub size={18} />
+                        Voir sur GitHub
+                    </a>
                 </div>
             </div>
 
@@ -212,6 +218,17 @@ function Chill2gether() {
                             Chill2gether est activement développé dans le cadre d'un projet universitaire (L3). 
                             De nouvelles fonctionnalités sont ajoutées régulièrement !
                         </p>
+                        <div className="flex justify-center gap-4 mt-6">
+                            <a 
+                                href="https://github.com/tidic84/chill2gether" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                            >
+                                <VscGithub size={20} />
+                                Voir sur GitHub
+                            </a>
+                        </div>
                     </div>
 
                 </div>

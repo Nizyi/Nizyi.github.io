@@ -55,7 +55,6 @@ function Window({
       const itemsForDisplay = itemsInFolder.map((item) => {
         const IconComponent = iconComponents[item.iconName];
 
-        // Vérifier si c'est une image (string) ou un composant
         const icon =
           typeof IconComponent === "string" ? (
             <img
