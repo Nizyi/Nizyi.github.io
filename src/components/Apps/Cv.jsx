@@ -199,6 +199,36 @@ function App() {
                     </div>
                 </div>
 
+                {/* langues */}
+                <div className="mb-10">
+                    <h2 className="text-2xl font-bold text-orange-600 mb-4 border-b-2 border-orange-200 pb-2">
+                        Langues
+                    </h2>
+
+                    <div className="flex gap-4">
+                        <div className="flex-1 bg-amber-50/80 rounded-xl p-4 border border-amber-200">
+                            <div className="flex items-center justify-between">
+                                <span className="font-bold text-amber-700">Français</span>
+                                <span className="text-sm text-gray-600">Langue maternelle</span>
+                            </div>
+                        </div>
+
+                        <div className="flex-1 bg-amber-50/80 rounded-xl p-4 border border-amber-200">
+                            <div className="flex items-center justify-between">
+                                <span className="font-bold text-amber-700">Anglais</span>
+                                <span className="text-sm text-gray-600">B2+</span>
+                            </div>
+                        </div>
+
+                        <div className="flex-1 bg-amber-50/80 rounded-xl p-4 border border-amber-200">
+                            <div className="flex items-center justify-between">
+                                <span className="font-bold text-amber-700">Japonais</span>
+                                <span className="text-sm text-gray-600">A2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* contact */}
                 <div>
                     <h2 className="text-2xl font-bold text-orange-600 mb-4 border-b-2 border-orange-200 pb-2">
