@@ -1,4 +1,4 @@
-import {VscSearch, VscAccount, VscCalendar, VscDatabase, VscRocket } from 'react-icons/vsc';
+import {VscSearch, VscAccount, VscCalendar, VscDatabase, VscRocket, VscGithub } from 'react-icons/vsc';
 import { FcShipped } from 'react-icons/fc';
 
 function CERICar() {
@@ -40,31 +40,31 @@ function CERICar() {
             step: "Étape 1",
             title: "Modélisation UML",
             description: "Diagrammes de cas d'utilisation, classes, séquences et états-transitions pour concevoir l'architecture.",
-            status: "✅ Terminé"
+            status: "✅Terminé"
         },
         {
             step: "Étape 2",
             title: "Modèle de données & ActiveRecord",
             description: "Implémentation du modèle avec ORM ActiveRecord, relations entre entités et méthodes métier.",
-            status: "🔄 En cours"
+            status: "✅Terminé"
         },
         {
             step: "Étape 3",
             title: "Vue et Layout MVC",
             description: "Développement de l'interface de recherche de voyages avec design responsive et charte graphique.",
-            status: "🔄 En cours"
+            status: "✅Terminé"
         },
         {
             step: "Étape 4",
             title: "Intégration Ajax",
             description: "Requêtes asynchrones avec jQuery, mise à jour dynamique du DOM sans rechargement complet.",
-            status: "⏳ À venir"
+            status: "✅Terminé"
         },
         {
             step: "Étape 5",
             title: "Réservation & Proposition",
             description: "Modules d'inscription, connexion, réservation de places et proposition de voyages par les conducteurs.",
-            status: "⏳ À venir"
+            status: "🔄En cours"
         }
     ];
 
@@ -102,9 +102,15 @@ function CERICar() {
                 </div>
 
                 <div className="mt-6 lg:mt-8">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-600 text-white rounded-lg text-sm font-semibold">
-                        🚧 En cours de développement
-                    </span>
+                    <a 
+                        href="https://github.com/Nizyi/CeriCar" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                    >
+                        <VscGithub size={18} />
+                        Voir sur GitHub
+                    </a>
                 </div>
             </div>
 
@@ -252,9 +258,16 @@ function CERICar() {
                             Développé dans le cadre de l'UCE AMS à l'Université d'Avignon. 
                             Le projet suit un planning structuré en 5 étapes validées progressivement.
                         </p>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 rounded-lg text-sm text-white">
-                            <VscDatabase size={18} />
-                            <span>Base de données partagée PostgreSQL</span>
+                        <div className="flex justify-center gap-4 mt-6">
+                            <a 
+                                href="https://github.com/Nizyi/CeriCar" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                            >
+                                <VscGithub size={20} />
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
 
